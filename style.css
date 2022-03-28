@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300&display=swap');
+
+/* font-family: 'Kaushan Script', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor: #A91B60;
+    --primary: #FF0080;
+    --secondary: #EC9EC0;
+    --ternary: #EBE0D0;
+    --black: #000;
+    --white: #fff;
+}
+
+
+/* navbar */
+
+.navbar {
+    max-width: 1300px;
+    width: 100%;
+    /* background-color: aquamarine; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.logoContainer img {
+    width: 100px;
+    object-fit: contain;
+}
+
+nav {
+    width: 40%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--mainColor);
+    font-family: 'Poppins', sans-serif;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons .fas {
+    color: var(--mainColor);
+    margin-left: 1em;
+    font-size: 1.1rem;
+}
+
+.icons .fa-bars {
+    display: none;
+}
+
+
+/* media queries for navbar */
+
+@media screen and (max-width: 990px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    .navbar {
+        max-width: 670px;
+    }
+    nav ul {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: var(--mainColor);
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 1em;
+        display: none;
+    }
+    nav li {
+        margin-bottom: 1em;
+    }
+    nav a {
+        color: var(--ternary);
+        font-size: 1.2rem;
+    }
+    .icons .fas {
+        font-size: 1.2rem;
+    }
+    .icons .fa-bars {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    html {
+        font-size: 12px;
+    }
+    .logoContainer img {
+        width: 80px;
+    }
+    .navbar {
+        max-width: 530px;
+    }
+}
+
+
+/* Section 1  */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1300px;
+    /* background-color: aqua; */
+    width: 100%;
+    margin: 0 auto 1em;
+}
+
+.contentBox {
+    width: 45%;
+    padding: .3em;
+}
+
+.container h1 {
+    font-size: 2.8rem;
+    font-family: 'Raleway', sans-serif;
+    color: var(--mainColor);
+}
+
+.shopping {
+    font-size: 3rem;
+    font-family: 'Kaushan Script', cursive;
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+}
+
+.contentBox p {
+    font-size: .9rem;
+    color: var(--black);
+    font-family: 'Poppins', sans-serif;
+    margin: .5em;
+}
+
+.btn {
+    width: 35%;
+    padding: .5em .3em;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    border: none;
+    outline: none;
+    background-color: var(--mainColor);
+    color: var(--ternary);
+}
+
+.imageContainer img {
+    width: 100%;
+}
+
+
+/* Media Queries for section 1 */
+
+@media screen and (max-width:990px) {
+    .container {
+        max-width: 950px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        flex-direction: column;
+    }
+    .contentBox {
+        width: 85%;
+    }
+    .contentBox h1 {
+        font-size: 2.2rem;
+        margin-top: .5rem;
+    }
+    .shopping {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .btn {
+        width: 25%;
+        padding: .8em;
+        font-size: 1rem;
+    }
+    .imgContainer img {
+        max-width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .bt {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    html {
+        font-size: 12px;
+    }
+    .container {
+        flex-direction: column-reverse;
+    }
+    .contentBox h1 {
+        text-align: center;
+    }
+    .btn {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .btn {
+        width: 50%;
+    }
+}
+
+
+/* section 2 starts here */
+
+.promotion {
+    justify-content: space-between;
+    margin-top: 1em;
+    background-image: linear-gradient(var(--secondary), var(--ternary), var(--secondary));
+    padding: 1em 0;
+}
+
+.cards {
+    width: 40%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 3px lightgray;
+}
+
+.cards img {
+    width: 50%;
+}
+
+.cardContent {
+    padding: 1em;
+    /* background-color: yellow; */
+    width: 100%;
+    text-align: center;
+}
+
+.cardContent h1 {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.btnAll {
+    width: 80%;
+}
+
+
+/* media queries */
+
+@media screen and (max-width:990px) {
+    .btn {
+        width: 100%;
+        font-size: .9rem;
+    }
+    .cardContent h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .cards {
+        width: 90%;
+    }
+    .btnAll {
+        width: 35%;
+    }
+    .cardContent {
+        text-align: right;
+    }
+    .cards img {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:568px) {
+    .cards img {
+        width: 47%;
+    }
+    .btn {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .btnAll {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .btnAll {
+        width: 100%;
+    }
+    .cardContent h1 {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Section 3 starts here */
+
+.title h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 0.5em 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.productsCards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* background-color: #A91B60; */
+    margin: 2em 0;
+}
+
+.productCard {
+    width: 22%;
+    /* background-color: yellowgreen; */
+    padding: 0 1em;
+    box-shadow: 4px 4px 20px -5px var(--secondary);
+    margin-bottom: 1.5em;
+}
+
+.productCard img {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    height: 300px;
+    object-fit: contain;
+}
+
+.productCard h2 {
+    font-size: 1.8rem;
+    font-family: 'Kaushan Script', cursive;
+    color: #A91B60;
+}
+
+.actualprice {
+    margin: .5em 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.price {
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: .5em;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.ratings {
+    font-size: 1rem;
+    color: var(--mainColor);
+}
+
+
+/* media queries */
+
+@media screen and (max-width:990px) {
+    .productCard {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .productCard {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:568px) {
+    .productCard {
+        width: 80%;
+    }
+    .title h1 {
+        font-size: 2.5rem;
+    }
+    .productCard img {
+        height: 200px;
+    }
+}
+
+.serviceText {
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+
+/* brands */
+
+.brands {
+    flex-wrap: wrap;
+}
+
+.brands img {
+    width: 100px;
+    margin-bottom: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    .brands {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .brands {
+        flex-direction: column;
+    }
+}
+
+
+/* footer */
+
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footerText {
+    width: 20%;
+}
+
+.footerText p {
+    font-family: 'Poppins', sans-serif;
+    font-size: .9rem;
+}
+
+.footerText h2 {
+    color: var(--maincolour);
+    margin-bottom: .3em;
+}
+
+.fab {
+    font-size: 1.1rem;
+    margin-left: .8em;
+    margin-top: 1em;
+    text-shadow: -1px -1px var(--mainColor);
+    transition: transform .5s;
+}
+
+.fab:hover {
+    color: var(--mainColor);
+    text-shadow: -1px -1px #fff;
+    transform: translateY(2px);
+}
+
+@media screen and (max-width:768) {
+    .footer {
+        flex-direction: row;
+    }
+    .footerTask {
+        width: 40%;
+        margin-top: 1 em;
+    }
+    .footer h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:768) {
+    .footer {
+        flex-direction: row;
+    }
+    .footerTask {
+        width: 40%;
+        margin-top: 1 em;
+    }
+    .footer h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and(max-width:568px) {
+    .footer {
+        text-align: center;
+    }
+    .footerText {
+        width: 80%;
+        margin-bottom: 1em;
+    }
+}
